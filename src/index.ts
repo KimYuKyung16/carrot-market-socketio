@@ -45,6 +45,6 @@ io.on('connection', (socket: any) => {
 });
 
 
-httpServer.listen(443, () => {
+httpServer.listen(process.env.PORT || 443, () => {
   console.log(`443 Server ...`);
 });

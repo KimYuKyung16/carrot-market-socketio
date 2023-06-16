@@ -8,7 +8,7 @@ const httpServer = createServer(app);
 const io = new Server(httpServer, {
   cors: {
     origin: "*",
-    allowedHeaders: ["my-custom-header"],
+    methods: ["GET", "POST"],
     credentials: true
   }
 });

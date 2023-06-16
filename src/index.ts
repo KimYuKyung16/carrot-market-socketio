@@ -7,7 +7,7 @@ const app: Express = express();
 const httpServer = createServer(app);
 const io = new Server(httpServer, {
   cors: {
-    origin: "http://localhost:3000",
+    origin: "https://carrot-market-rh3l-gny9hl7o0-kimyukyung16.vercel.app",
     allowedHeaders: ["my-custom-header"],
     credentials: true
   }

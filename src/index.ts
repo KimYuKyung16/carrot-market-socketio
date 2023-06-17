@@ -1,4 +1,4 @@
-import express, { Express, Request, Response } from "express";
+import express, { Express } from "express";
 import { createServer } from "http";
 import { Server } from "socket.io";
 import cors from "cors";
@@ -13,7 +13,6 @@ const io = new Server(httpServer, {
     credentials: true
   }
 });
-
 
 app.use(express.json());
 
@@ -45,6 +44,6 @@ io.on('connection', (socket: any) => {
 });
 
 
-httpServer.listen(443, () => {
+httpServer.listen(process.env.PORT || 443, () => {
   console.log(`443 Server ...`);
 });
